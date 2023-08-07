@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardVerse | A MTG Card Authentication, Grading & Sorting Solution</title>
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .topnav {
+            background-color: #ffffff;
+            overflow: hidden;
+        }
+
+        .topnav a {
+            /* position: fixed; */
+            z-index: 9999;
+            float: left;
+            color: #000000;
+            text-align: center;
+            font-size: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            background-color: #ffffff;
+            color: black;
+        }
+
+        /* Add a color to the active/current link */
+        .topnav a.active {
+            background-color: #000000;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 28px;
+        }
+
+        h3 {
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666666;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: decimal;
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            display: block;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #333;
+            margin: 20px 0;
+        }
+
+        .skills {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .skills h2 {
+            font-size: 28px;
+            margin: 20px 0;
+        }
+
+        .skills ul {
+            list-style-type: disc;
+            margin: 0;
+            padding-left: 10px;
+        }
+
+        .skills li {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .skills ul ul {
+            list-style-type: square;
+            padding-left: 30px;
+        }
+
+        .project-content {
+            font-family: Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .project h2 {
+            font-size: 28px;
+            margin: 20px;
+        }
+
+        .flow-images {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .flow-images h4 {
+            text-align: center;
+            margin-bottom: 2px;
+            margin-top: 1px;
+        }
+
+        .flow-images img {
+            display: block;
+            max-width: 60%;
+            height: auto;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            /* padding-bottom: 5%; */
+        }
+
+        .video {
+            position: flex;
+            top: 0;
+            left: 0;
+            width: 30%;
+            height: 30%;
+        }
+
+        .video-container_two {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            /* padding-bottom: 5%; */
+        }
+
+        .video_two {
+            position: flex;
+            top: 0;
+            left: 0;
+            width: 80%;
+            height: 80%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#fast-facts">Fast Facts</a>
+        <a href="#skills">Skills I Learned</a>
+        <a href="#system-design">System Design</a>
+        <a href="#system-components">System Components</a>
+        <a href="#results">Results</a>
+    </div>
+    <div class="container">
+        <center>
+            <h1>CardVerse</h1>
+        </center>
+        <center>
+            <h2>A machine that authenticates, grades and sorts Magic: The Gathering Card.</h2>
+        </center>
+        <center>
+            <h3>Jatan J. Pandya</h3>
+        </center>
+        <hr>
+        <h2>Fast Facts</h2>
+        <hr id="fast-facts">
+        <ul>
+            <li>Capacity of 🃏<b>1000 Cards</b>, speed of <b>2 cards/min</b></li>
+            <li><b>🚀 AWS stack (IoT Core, EC2, Lambda, S3)</b> is used to communicate, process and store card
+                images
+            </li>
+            <li>An <b>🤖 Unsupervised Machine Learning</b> algorithm is used to detect card defects</li>
+            <li>A <b>🔍 Pattern Matching Algorithm & Contouring algorithm</b> is used to authenticate card based on
+                the
+                Rosette Pattern</li>
+            <li>Uses <b>🛠️ Custom</b> made hardware such as <b>🔌 Printed Circuit Board</b>, <b>🏗️ X-Y-Z Gantry
+                    System</b> and <b>🖨️ 3D Printed models</b></li>
+            <li>A user-friendly <b>🌐Website</b> to showcase the original card, its defects and bin location</li>
+            <li>Won a total of <b>💰 $7000</b> via UMass Amherst's <b>🏆 Innovation Challenge Competitions</b></li>
+        </ul>
+        <hr id="skills">
+        <div class="skills">
+            <h2>Skills I Learned</h2>
+            <ul>
+                <strong>👩‍💻 Software Engineering:</strong>
+                <ul>
+                    <li>Developed robust control code for the entire system</li>
+                    <li>Integrated X-Y-Z Gantry System, PCBs, Load Cell and imaging chamber, AWS services & Website
+                        to
+                        complete one system call</li>
+                    <li>Technologies used: Python, C, git</li>
+                </ul>
+                <strong>🤖 Machine Learning, Image Processing, and Algorithm Design:</strong>
+                <ul>
+                    <li>Developed AWS solutions for processing and storing card information</li>
+                </ul>
+                <strong>☁️ Cloud Computing & Website Development:</strong>
+                <ul>
+                    <li>Used AWS to process and store card information</li>
+                    <li>Utilized AWS IoT Core (communicate PCBs), Lambda (run Machine Learning & Image Processing
+                        algorithms), S3 (store processed images and metadata), and EC2 (host website)</li>
+                    <li>Technologies used: AWS Stack, HTML, CSS, JavaScript</li>
+                </ul>
+                <strong>⚡ Electrical & Hardware Engineering:</strong>
+                <ul>
+                    <li>Designed custom PCB, integrating RP2040 and breakout boards</li>
+                    <li>Integrated hardware components for card movement (Stepper Motor Mechanical Gantry, Suction
+                        Pump,
+                        LED Imaging Section)</li>
+                    <li>Technologies used: KiCAD, SMT Soldering, Circuit Analysis</li>
+                </ul>
+                <strong>🎨 Product Design:</strong>
+                <ul>
+                    <li>Developed CAD 3D-printed models</li>
+                    <li>Designed imaging chamber for enhancing card artifacts and defects</li>
+                    <li>Designed machine architecture to increase system throughput by <strong>7X</strong>, by
+                        integrating load cell, PCBs, and imaging section in a modular fashion</li>
+                    <li>Technologies used: SolidWorks, 3D Printing, Rapid Prototyping</li>
+                </ul>
+            </ul>
+        </div>
+        <hr id="project-motivation">
+        <div class="project-content">
+            <h2>Project Motivation</h2>
+            <p>
+            <ul>
+                <li>🎴 Collectible card games (CCG) or Trading card games (TCG) are types of card games that mix
+                    strategic deck-building elements with features of trading cards.</li>
+                <li>🃏 One of the earliest and perhaps the biggest in market and volume size is a CCG named Magic:
+                    The
+                    Gathering.</li>
+                <li>With such an enormous market, the market has problems of its own:
+                    <ul>
+                        <li>Sophisticated counterfeit cards unnoticeable to naked eye</li>
+                        <li>Artificial alterations on defects
+                            <ul>
+                                <li><b>Ink</b> tweaks</li>
+                                <li>Rebacked Cards (Splicing 2 Cards together)</li>
+                            </ul>
+                        </li>
+                        <li>🛠️ Poor Card Conditions (Artifacts)
+                            <ul>
+                                <li><b>Bends</b></li>
+                                <li><b>Dents</b></li>
+                                <li><b>Scratches</b></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            </p>
+
+            <p>
+                Naturally, due to these issues, it is necessary to have a card graded, and authenticated by a human
+                expert before buying or selling.
+                With less availability of human experts and a huge number of customers; as one can imagine, this
+                current
+                pipeline is an extremely time-consuming and expensive process.
+                <br><br>
+                <b>In comes, CardVerse: A fully automated machine that authenticates, grades and sorts Magic: The
+                    Gathering</b>
+            </p>
+        </div>
+
+        <hr id="system-design">
+        <div class="flow-images">
+            <h2>System Design</h2>
+            <img src="files/hardware_block.png" alt="Hardware Diagram">
+            <br>
+            <img src="files/software_diagram.png" alt="Software Diagram">
+        </div>
+
+        <hr id="system-components">
+        <div class="flow-images">
+            <h2>System Components</h2>
+            <img src="files/imaging_section.png" alt="Imaging Scale">
+            <br>
+            <center>
+                <h4>Imaging Chamber</h4>
+            </center>
+            <img src="files/pcb.png" alt="PCB">
+            <center>
+                <h4>Custom RP2040 Based PCB</h4>
+            </center>
+            <br>
+            <img src="files/z_mount.png" alt="Z App">
+            <center>
+                <h4>Z mount consisting of 2 Cameras: 40x Zoom (For Forgery Detection) & 1080p Camera (For Defect
+                    Detection) & custom suction pump to move cards around</h4>
+            </center>
+            <br>
+            <img src="files/weigh_scale.png" alt="Weigh Scale">
+            <br>
+        </div>
+
+        <hr id="results">
+        <div class="flow-images">
+            <h2>Results</h2>
+            <img src="files/processed_fake.png" alt="Fake/Real">
+            <center>
+                <h4>Card Authentication</h4>
+            </center>
+            <br>
+            <img src="files/moriak_reaver.png" alt="Artifact Detection">
+            <center>
+                <h4>Artifact Detection</h4>
+            </center>
+            <br>
+            <div class="video-container_two">
+                <video controls autoplay class="video_two">
+                    <source src="files/final_system_movie.mov" type="video/mp4">
+                </video>
+            </div>
+            <center>
+                <h4>One Complete Homing cycle of the system</h4>
+            </center>
+            <br>
+            <div class="video-container">
+                <video controls autoplay class="video">
+                    <source src="files/card_verse_work.MOV" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <center>
+            <h4>Day 280 of 305</h4>
+        </center>
+    </div>
+</body>
+
+</html>
